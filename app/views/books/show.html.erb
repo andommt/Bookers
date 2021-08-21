@@ -1,0 +1,15 @@
+<!--<p>successfully!!!!!</p>-->
+
+
+<% if flash[:notice] %>
+  <p><%= flash[:notice] %></p>
+<% end %>
+
+<h2>タイトル</h2>
+
+<p><%= @list.title %></p>
+<h2>本文</h2>
+<p><%= @list.body %></p>
+<%= link_to "Edit", edit_book_path(@list.id) %>
+<%= link_to "Back", '/books' %>
+
